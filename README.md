@@ -1,2 +1,2 @@
-# effective-python-study
-学习effective-python-编写高质量python代码的59个有效方法一书的笔记
+# study
+学习计算机相关知识的笔记
