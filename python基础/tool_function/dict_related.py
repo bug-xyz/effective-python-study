@@ -23,11 +23,11 @@ def dict_append():
 class Struct(dict):
     """
     - 为字典加上点语法. 例如:
-    >>> o = Struct({'a':1})
-    >>> o.a
-    >>> 1
-    >>> o.b
-    >>> None
+    # >>> o = Struct({'a':1})
+    # >>> o.a
+    # >>> 1
+    # >>> o.b
+    # >>> None
     """
 
     def __init__(self, dictobj={}):
@@ -48,8 +48,26 @@ class Struct(dict):
         return id(self)
 
 
+def dict_reverse():
+    """
+    字典键值互换，利用推导机制（列表推导式）
+    :return:
+    """
+    chile_ranks = {'ghost': 1, 'habanero': 2, 'cayenne': 3}
+    rank_dict = {y: x for x, y in chile_ranks.items()}
+    print(rank_dict)
+    chile_len_set = {len(x) for x in rank_dict.values()}  # 集合也可以利用推导机制
+    print(chile_len_set)
+    return ''
+
+
 if __name__ == '__main__':
     pass
     # dict_append()
+    # aa = Struct()
+    # aa.bb = 'bb'
+    # aa.cc = 'cc'
+    # print(aa, aa.bb, aa.cc)
+    # dict_reverse()
 
 
