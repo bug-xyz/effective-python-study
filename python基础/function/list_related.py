@@ -19,7 +19,6 @@ def list_dict_distinct():
     """
     列表字典去重，不改变原本顺序,字典元素完全相同时认为重复
     :return:
-
     reduce() 函数会对参数序列中元素进行累积。
     函数将一个数据集合（链表，元组等）中的所有数据进行如下操作：
     用传给 reduce 中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，
@@ -44,28 +43,11 @@ def list_dict_update():
     return ''
 
 
-def dict_append():
-    """
-    合并两个字典，解析字典,
-    :return:
-    """
-    obj_1 = {"id": 1, "name": "王小明"}
-    obj_2 = dict(**obj_1)
-    print('字典不变：', obj_2)
-    obj_3 = {"age": 18}
-    obj_4 = dict(obj_1, **obj_3)
-    print('字典合并：', obj_4)
-    obj_5 = {"id": 2, "info": {"name": "李晓文", "age": 20}}
-    obj_6 = dict(id=2, test=123, **obj_5.get('info'))
-    print('字典解析：', obj_6)
-    return ''
-
-
 if __name__ == '__main__':
     pass
     # list_distinct()
     # list_dict_distinct()
     # list_dict_update()
-    # dict_append()
+
 
 
