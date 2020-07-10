@@ -20,10 +20,10 @@ def dict_append():
     return ''
 
 
-class Struct(dict):
+class Ddict(dict):
     """
     - 为字典加上点语法. 例如:
-    # >>> o = Struct({'a':1})
+    # >>> o = Ddict({'a':1})
     # >>> o.a
     # >>> 1
     # >>> o.b
@@ -61,10 +61,27 @@ def dict_reverse():
     return ''
 
 
+def little_knowledge():
+    """
+    小知识点
+    :return:
+    """
+    a = {}
+    b = a.setdefault(1, [])  # 不存在键时增加键值对，后续更新返回值会同步更新字典
+    print(a, b)  # {1: []} []
+    b.append(123)
+    print(a, b)  # {1: [123]} [123]
+    c = a.setdefault(1, None)  # 存在键时直接获取, 后续更新返回值会同步更新字典, 代码等效与 c = a.setdefault(1)
+    c.append(456)
+    print(a, c)  # {1: [123, 456]} [123, 456]
+    return ''
+
+
 if __name__ == '__main__':
     pass
+    little_knowledge()
     # dict_append()
-    # aa = Struct()
+    # aa = Ddict()
     # aa.bb = 'bb'
     # aa.cc = 'cc'
     # print(aa, aa.bb, aa.cc)
