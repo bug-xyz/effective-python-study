@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # 'django.contrib.staticfiles',     # django自动收集静态文件注释，改为自定义
     'apps',     # 安装自己的应用
 ]
 
@@ -124,3 +124,6 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+APIDOC_ROOT = os.path.join(BASE_DIR, 'static/apidoc/')  # apidoc配置
+

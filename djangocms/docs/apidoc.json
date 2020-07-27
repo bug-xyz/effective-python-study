@@ -1,0 +1,16 @@
+{
+  "name": "djangocmsAPI",
+  "version": "2.0.0",
+  "description": "django学习demo",
+  "title": "djangocmsAPI",
+  "url": "http://192.168.13.96:9000",
+  "header": {
+    "title": "djangocmsAPI",
+    "filename": "header.md"
+  },
+  "template": {
+    "forceLanguage": "zh_cn",
+    "withCompare": false,
+    "withGenerator": true
+  }
+}
