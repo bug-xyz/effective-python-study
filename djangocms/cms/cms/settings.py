@@ -89,7 +89,7 @@ DATABASES = {
     }
 }
 
-# DATABASE_ROUTERS = ['core.router.MyAppRouter']
+# DATABASE_ROUTERS = ['core.router.MyAppRouter']    # 多数据库配置
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -130,4 +130,19 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 APIDOC_ROOT = os.path.join(BASE_DIR, 'static/apidoc/')  # apidoc配置
+
+# 缓存
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',   # 利用数据库来缓存
+        'LOCATION': 'cms_cache',    # 表名
+        'TIMEOUT': 600,     # 缓存超时时间（默认300，None表示永不过期，0表示立即过期）
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000,     # 最大缓存个数（默认300）
+            'CULL_FREQUENCY': 3,    # 缓存到达最大个数之后，剔除缓存个数的比例，即：1/CULL_FREQUENCY（默认3）
+        },
+        'KEY_PREFIX': '',           # 缓存key的前缀（默认空）
+    }
+}
+
 

@@ -1,1 +1,0 @@
-在docs文件夹下cmd执行：apidoc -i ../cms/apps -o ../cms/static/apidoc
