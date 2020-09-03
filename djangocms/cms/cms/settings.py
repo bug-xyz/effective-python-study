@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'djangocms',
         'USER': 'root',
         'PASSWORD': 'ccc159357258',
-        'HOST': '127.0.0.1',
+        'HOST': '192.168.13.96',
         'PORT': 3306,
     }
 }
