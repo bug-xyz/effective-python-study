@@ -12,7 +12,7 @@ from libs.utils.ajax import ajax_fail
 log = logging.getLogger(__name__)
 
 # 无需登录接口
-no_login_urls = ['apidoc', 'register', 'login', 'change_pwd']
+no_login_urls = ['apidoc', 'register', 'login', 'change_pwd', 'common']
 
 
 class AuthenticationMiddleware(MiddlewareMixin):
